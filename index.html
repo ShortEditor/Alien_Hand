@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seat Selection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Alien Hand 3</h1>
+    </header>
+
+    <!-- Movie Poster Section -->
+    <section id="moviePoster">
+        <div id="movieInfo">
+            <!-- Use the provided poster image URL -->
+            <img src="https://i.postimg.cc/65hbxnT0/Picsart-24-11-09-21-35-18-621.jpg" alt="Movie Poster" id="movieImage">
+            <div id="movieDetails">
+                <h2>Alien Hand 3</h2>
+                <p>Action | Adventure | Sci-Fi</p>
+                <button onclick="openSeatModal()">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seat Selection Modal -->
+    <div id="seatModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeSeatModal()">&times;</span>
+            <h2>Select your seats</h2>
+            <div id="seatSelection" class="seat-container"></div>
+            <button id="proceedButton" onclick="showBookingModal()" style="display: none;">Proceed to Book</button>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBookingModal()">&times;</span>
+            <h2>Confirm Your Booking</h2>
+            <p id="movieTitleModal"></p>
+            <p id="amountModalDetails"></p>
+            <button onclick="showQRCodeModal()">Proceed with Payment</button>
+        </div>
+    </div>
+
+    <!-- QR Code Modal -->
+    <div id="qrCodeModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeQRCodeModal()">&times;</span>
+            <h2>Scan to Pay</h2>
+            <div id="qrCodeContainer" style="display: inline-block; width: 50%;"></div>
+            <div id="qrMessageContainer" style="display: inline-block; width: 45%;"></div>
+        </div>
+    </div>
+
+    <!-- Include QRCode.js Library -->
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+    <script src="script.js"></script>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Naga Ganesh (Short Eidtor). All Rights Reserved.</p>
+  <div>
+            <a href="https://www.instagram.com/bhargav_works/" target="_blank" class="social-link">Instagram</a> |
+            <a href="https://www.youtube.com/@BhargavWorks" target="_blank" class="social-link">YouTube</a>
+        </div>
+    </footer>
+</body>
+</html>

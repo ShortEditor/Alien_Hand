@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alien Hand 3 Movie Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/BookMyShow_logo.png" alt="Logo" />
+        </div>
+    </header>
+
+    <!-- Movie Selection Section -->
+    <section class="movie-selection">
+        <h2>Now Showing</h2>
+        <div class="movie-card" onclick="selectMovie('Alien Hand 3')">
+            <img src="assets/movie-posters/Alien-Hand-3.jpg" alt="Alien Hand 3 Poster" class="movie-poster">
+            <div class="movie-title">Alien Hand 3</div>
+        </div>
+    </section>
+
+    <!-- Seat Selection Modal -->
+    <div id="seatModal" class="modal">
+        <div class="modal-content">
+            <h2>Select Your Seats</h2>
+            <div id="seatSelection" class="seat-container"></div>
+            <div id="amountModalDetails">Amount: ₹0</div>
+            <button class="close-modal" onclick="closeSeatModal()">Close</button>
+            <button class="select-movie" onclick="showBookingModal()">Proceed to Booking</button>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <h2>Booking for <span id="movieTitleModal">Alien Hand 3</span></h2>
+            <div id="amountModalDetails">Amount: ₹0</div>
+            <button class="close-modal" onclick="closeBookingModal()">Close</button>
+            <button class="select-movie" onclick="showQRCodeModal()">Proceed to Payment</button>
+        </div>
+    </div>
+
+    <!-- QR Code Modal -->
+    <div id="qrCodeModal" class="modal">
+        <div class="modal-content">
+            <h2>Payment QR Code</h2>
+            <div class="qr-code-container">
+                <div id="paymentQRCode"></div>
+            </div>
+            <button class="close-modal" onclick="closeQRCodeModal()">Close</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Help</a>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
