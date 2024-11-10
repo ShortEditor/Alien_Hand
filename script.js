@@ -45,7 +45,7 @@ function toggleSeatSelection(seat, index) {
 function showBookingModal() {
     if (selectedSeats.length > 0) {
         const movieTitle = 'Alien Hand 3';
-        const amount = selectedSeats.length * 150; // Price per seat: 150
+        const amount = selectedSeats.length * 120; // Price per seat: 120
 
         document.getElementById('movieTitleModal').innerText = `Movie: ${movieTitle}`;
         document.getElementById('amountModalDetails').innerText = `Total: ₹${amount}`;
