@@ -78,7 +78,7 @@ function showQRCodeModal() {
     new QRCode(qrCodeContainer, upiUrl);
 
     messageContainer.innerHTML = `    
-        <p>Scan to pay ₹${selectedSeats.length * 120}. After payment, copy your transaction ID and paste below:  </p>
+        <p>Scan to pay ₹${selectedSeats.length * 120}. After payment download your ticket, copy your transaction ID and paste below:  </p>
         <input type="text" id="transactionIdInput" placeholder="Enter Transaction ID">
         <button onclick="confirmPayment()">Submit Transaction ID</button>
     `;
