@@ -71,12 +71,6 @@ function showQRCodeModal() {
 
     // Add a professional message next to the QR code
     messageContainer.innerHTML = `
-<p style="font-size: 18px; font-weight: bold; text-align: center; margin-top: 10px;">
-            Made by shorteditor.
-        </p>
-        <p style="font-size: 18px; font-weight: bold; text-align: center; margin-top: 10px;">
-            Scan the QR code using any UPI-enabled app to complete your payment.
-        </p>
     `;
 
     document.getElementById('qrCodeModal').style.display = "block";
